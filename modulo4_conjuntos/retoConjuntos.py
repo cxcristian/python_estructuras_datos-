@@ -5,19 +5,14 @@ tienda_sur = {"arepas", "arroz", "frijole", "gato"}
 
 # Calcular catalogo_completo con union()
 catalogo_completo = tienda_centro.union(tienda_norte).union(tienda_sur)
-print("Catálogo completo:", catalogo_completo)
 
 # Calcular productos_comunes con intersection()
 productos_comunes = tienda_centro.intersection(tienda_norte, tienda_sur)
-print("Productos comunes entre todas las tiendas:", productos_comunes)
 
 # Exclusivos de cada tienda con difference(union())
 exclusivos_centro = tienda_centro.difference(tienda_norte, tienda_sur)
 exclusivos_norte = tienda_norte.difference(tienda_centro, tienda_sur)
 exclusivos_sur = tienda_sur.difference(tienda_centro, tienda_norte)
-print("Exclusivos centro:", exclusivos_centro)
-print("Exclusivos norte:", exclusivos_norte)
-print("Exclusivos sur:", exclusivos_sur)
 
 # Verificar pares con isdisjoint()
 disjoint_centro_norte = tienda_centro.isdisjoint(tienda_norte)
@@ -34,14 +29,21 @@ comunes = usuario1 & usuario2
 universo = usuario1 | usuario2 | usuario3
 exclusivos = usuario1 - usuario2
 diferencia_simetrica = usuario1 ^ usuario2
-print("Géneros comunes usuario1 y usuario2:", comunes)
-print("Todos los géneros (universo):", universo)
-print("Géneros exclusivos usuario1:", exclusivos)
-print("Diferencia simétrica usuario1 y usuario2:", diferencia_simetrica)
 
-# Verificar pares con isdisjoint() - resultados
-print("¿Tienda centro y norte son disjuntos?:", disjoint_centro_norte)
-print("¿Tienda centro y sur son disjuntos?:", disjoint_centro_sur)
-print("¿Tienda norte y sur son disjuntos?:", disjoint_norte_sur)
+# Resumen
+print("=== RESUMEN DE CONJUNTOS ===")
+print("\n1. Tiendas:")
+print("   Catálogo completo:", catalogo_completo)
+print("   Productos comunes entre todas las tiendas:", productos_comunes)
+print("   Exclusivos centro:", exclusivos_centro)
+print("   Exclusivos norte:", exclusivos_norte)
+print("   Exclusivos sur:", exclusivos_sur)
+print("   ¿Tienda centro y norte son disjuntos?:", disjoint_centro_norte)
+print("   ¿Tienda centro y sur son disjuntos?:", disjoint_centro_sur)
+print("   ¿Tienda norte y sur son disjuntos?:", disjoint_norte_sur)
 
-#Resumen
+print("\n2. Usuarios:")
+print("   Géneros comunes usuario1 y usuario2:", comunes)
+print("   Todos los géneros (universo):", universo)
+print("   Géneros exclusivos usuario1:", exclusivos)
+print("   Diferencia simétrica usuario1 y usuario2:", diferencia_simetrica)
