@@ -29,11 +29,10 @@ comunes = usuario1 & usuario2
 universo = usuario1 | usuario2 | usuario3
 exclusivos = usuario1 - usuario2
 diferencia_simetrica = usuario1 ^ usuario2
-# Verificar si usuario1 es subconjunto del universo
 subconjunto = usuario1 <= universo
 
 # Resumen
-print("=== RESUMEN DE CONJUNTOS ===")
+print("=== RESUMEN DE CONJUNTOS =====")
 print("\n1. Tiendas:")
 print("   Catálogo completo:", catalogo_completo)
 print("   Productos comunes entre todas las tiendas:", productos_comunes)
