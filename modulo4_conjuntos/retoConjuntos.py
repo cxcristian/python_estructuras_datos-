@@ -29,6 +29,8 @@ comunes = usuario1 & usuario2
 universo = usuario1 | usuario2 | usuario3
 exclusivos = usuario1 - usuario2
 diferencia_simetrica = usuario1 ^ usuario2
+# Verificar si usuario1 es subconjunto del universo
+subconjunto = usuario1 <= universo
 
 # Resumen
 print("=== RESUMEN DE CONJUNTOS ===")
@@ -47,3 +49,4 @@ print("   Géneros comunes usuario1 y usuario2:", comunes)
 print("   Todos los géneros (universo):", universo)
 print("   Géneros exclusivos usuario1:", exclusivos)
 print("   Diferencia simétrica usuario1 y usuario2:", diferencia_simetrica)
+print("   ¿usuario1 es subconjunto del universo?:", subconjunto)
